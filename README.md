@@ -3,7 +3,7 @@
 
 **Add a function:**
 
-- func new --name <nameOfFunction> --t "<typeOfTrigger>"
+- func new --name < nameOfFunction > --t "< typeOfTrigger >"
 
 **Run: ** 
 
