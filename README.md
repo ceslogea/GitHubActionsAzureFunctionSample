@@ -5,7 +5,7 @@
 
 - func new --name < nameOfFunction > --t "< typeOfTrigger >"
 
-**Run: ** 
+**Run:** 
 
 - func start
 - func start --functions FuncSortListOfStrings 
