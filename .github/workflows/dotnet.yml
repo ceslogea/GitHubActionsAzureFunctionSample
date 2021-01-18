@@ -1,10 +1,17 @@
 name: Deploy DotNet project to Azure Function App
 
 on:
-  # Trigger the workflow on push or pull request
   push:
-    branches:
-      - 'release/*.*.*.*'
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      # Push events on main branch
+      - main
+      # Push events to branches matching refs/heads/releases/10
+      - 'release/**'
+    # Sequence of patterns matched against refs/tags
+    #tags:        
+    #  - v1             # Push events to v1 tag
+    #  - v1.*           # Push events to v1.0, v1.1, and v1.9 tags
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
