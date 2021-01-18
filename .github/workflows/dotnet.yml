@@ -2,7 +2,7 @@ name: Deploy DotNet project to Azure Function App
 
 on:
   push:
-    # Sequence of patterns matched against refs/heads
+    # Sequence of patterns matched against refs/head
     branches:    
       # Push events on main branch
       - main
