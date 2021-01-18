@@ -2,9 +2,9 @@ name: Deploy DotNet project to Azure Function App
 
 on:  
   create:
-  release:
-      types: # This configuration does not affect the page_build event above
-      - created
+    release:
+        types: # This configuration does not affect the page_build event above
+        - created
 
 
 # CONFIGURATION
