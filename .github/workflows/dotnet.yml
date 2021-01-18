@@ -1,13 +1,13 @@
 name: Deploy DotNet project to Azure Function App
 
-on: [create, push]
-  # push:
+on: #[create, push]
+   push:
     # Sequence of patterns matched against refs/head
-  #  branches:
+    branches:
       # Push events on main branch
-   #   - master
+      - master
       # Push events to branches matching refs/heads/releases/10
-   #   - 'release/**'
+      - 'release/**'
     # Sequence of patterns matched against refs/tags
     #tags:        
     #  - v1             # Push events to v1 tag
