@@ -1,9 +1,10 @@
 name: Deploy DotNet project to Azure Function App
 
 on:
+  create:
   push:
     # Sequence of patterns matched against refs/head
-    branches:    
+    branches:
       # Push events on main branch
       - master
       # Push events to branches matching refs/heads/releases/10
@@ -26,6 +27,7 @@ env:
   DOTNET_VERSION: '3.1'              # set this to the dotnet version to use
 
 jobs:
+  if: ${{ contains(github.ref, 'refs/heads/releases/') }}
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
