@@ -1,6 +1,6 @@
 name: Deploy DotNet project to Azure Function App
 
-on: create
+on: [create, push]
   # push:
     # Sequence of patterns matched against refs/head
   #  branches:
