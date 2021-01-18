@@ -5,7 +5,7 @@ on:
     # Sequence of patterns matched against refs/head
     branches:    
       # Push events on main branch
-      - main
+      - master
       # Push events to branches matching refs/heads/releases/10
       - 'release/**'
     # Sequence of patterns matched against refs/tags
