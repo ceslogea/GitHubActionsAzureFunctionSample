@@ -1,9 +1,10 @@
 name: Deploy DotNet project to Azure Function App
 
 on:
-  release:
-    types: [created, edited, published]
-
+  # Trigger the workflow on push or pull request
+  create:
+    branches:
+      - 'release/*.*.*.*'
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
