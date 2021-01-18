@@ -2,7 +2,7 @@ name: Deploy DotNet project to Azure Function App
 
 on:
   release:
-    types: [published]
+    types: [created, edited, published]
 
 
 # CONFIGURATION
