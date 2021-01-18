@@ -1,9 +1,11 @@
 name: Deploy DotNet project to Azure Function App
 
-on: 
-    #tags:        
-    #  - v1             # Push events to v1 tag
-    #  - v1.*           # Push events to v1.0, v1.1, and v1.9 tags
+on:
+  workflow_dispatch:
+    inputs:
+      versionName:
+        description: 'Number of version  (ie 5.5.0.1)'
+        required: true
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
@@ -23,8 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ contains(github.ref, 'refs/heads/release/') }}
     steps:
-    - name: 'Checkout GitHub Action'
-      uses: actions/checkout@master
+    - name: Check out code
+      uses: actions/checkout@v2
+      with:
+        ref: 'release/${{ github.event.inputs.versionName }}'
     - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
       uses: actions/setup-dotnet@v1
       with:
