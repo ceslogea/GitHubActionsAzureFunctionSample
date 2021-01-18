@@ -26,13 +26,13 @@ env:
   DOTNET_VERSION: '3.1'              # set this to the dotnet version to use
 
 jobs:
-  if: ${{ contains(github.ref, 'refs/heads/releases/') }}
+  
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@master
-
+      if: ${{ contains(github.ref, 'refs/heads/releases/') }}
     - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
       uses: actions/setup-dotnet@v1
       with:
