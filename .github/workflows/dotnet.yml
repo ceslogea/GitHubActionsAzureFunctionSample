@@ -4,7 +4,7 @@ on:
   # Trigger the workflow on push or pull request
   push:
     branches:
-      - releases/*
+      - release/*
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
