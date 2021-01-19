@@ -23,7 +23,6 @@ jobs:
   
   build-and-deploy:
     runs-on: ubuntu-latest
-    if: ${{ contains(github.ref, 'refs/heads/release/') }}
     steps:
     - name: Check out code
       uses: actions/checkout@v2
