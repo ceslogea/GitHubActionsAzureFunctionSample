@@ -1,4 +1,4 @@
-name: Deploy DotNet project to Azure Function App by Release number
+name: Deploy by Release number
 
 on:
   workflow_dispatch:
